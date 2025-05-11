@@ -36,8 +36,9 @@ jobs:
         with:
           node-version: "20"
           cache: "npm"
-      # https://github.com/nextjs/deploy-github-pages/blob/main/.github/workflows/deploy.yml
-
+          # https://github.com/nextjs/deploy-github-pages/blob/main/.github/workflows/deploy.yml
+          # https://dev.to/imomaliev/til-fix-error-dependencies-lock-file-is-not-found-ade
+          cache-dependency-path: "./simple-arte-homepage/package-lock.json"
       - name: Setup Pages
         id: setup_pages
         uses: actions/configure-pages@v5
