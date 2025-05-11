@@ -64,8 +64,8 @@ jobs:
       # - name: Install dependencies
       #   run: npm install
       - name: Build with Next.js
-        run: npm next build
-        working-directory: simple-arte-homepage
+        run: npm run build
+        working-directory: ./simple-arte-homepage
         env:
           PAGES_BASE_PATH: ${{ steps.setup_pages.outputs.base_path }}
       - name: Upload artifact
