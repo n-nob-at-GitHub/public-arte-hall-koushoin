@@ -63,6 +63,8 @@ jobs:
         uses: actions/upload-pages-artifact@v3
         with:
           path: simple-arte-homepage/out
+      - name: Debug show project root
+        run: ls -la
 
   # Deployment job
   deploy:
