@@ -55,7 +55,9 @@ jobs:
         run: npm install
         working-directory: ./simple-arte-homepage
       - name: Build with Next.js
-        run: npm run build
+        run: |
+         npm run build
+         npm run export
         working-directory: ./simple-arte-homepage
         env:
           PAGES_BASE_PATH: ${{ steps.setup_pages.outputs.base_path }}
