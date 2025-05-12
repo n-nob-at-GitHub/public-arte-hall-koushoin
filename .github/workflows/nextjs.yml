@@ -74,7 +74,7 @@ jobs:
       - name: Download exported site
         uses: actions/download-artifact@v4
         with:
-          name: simple-arte-homepage
+          name: github-pages
           path: simple-arte-homepage
       - name: Debug list files
         run: ls -la
