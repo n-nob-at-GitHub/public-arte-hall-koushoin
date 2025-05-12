@@ -71,6 +71,11 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
+      - name: Download exported site
+        uses: actions/download-artifact@v4
+        with:
+          name: simple-arte-homepage
+          path: simple-arte-homepage
       - name: Debug list files
         run: ls -la
       - name: Configure AWS credentials
