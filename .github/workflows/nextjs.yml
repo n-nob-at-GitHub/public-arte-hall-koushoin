@@ -77,4 +77,5 @@ jobs:
           aws-region: ap-northeast-1
 
       - name: Deploy to S3
-        run: aws s3 sync ./simple-arte-homepage/out s3://${{ secrets.AWS_S3_BUCKET }} --delete
+        working-directory: ./simple-arte-homepage
+        run: aws s3 sync ./out s3://${{ secrets.AWS_S3_BUCKET }} --delete
